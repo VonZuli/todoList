@@ -1,0 +1,162 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #4c4452;
+  color: #faf7ff;
+  width: fit-content;
+  margin: 0 auto;
+  padding-top: 20px;
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: -1px;
+  border: #b2a8b8 solid 5px;
+  padding: 20px;
+}
+button {
+  background-color: #cc9cf3;
+  margin-left: 2px;
+  border-radius: 10px;
+  color: #28262c;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: -1px;
+  font-size: medium;
+  border: 1px solid #cc9cf3;
+  /* box-shadow: rgb(0, 0, 0), 0.5; */
+}
+button:hover {
+  border: 1px solid #28262c;
+  /* border-color: #28262c; */
+}
+.header {
+  display: flex;
+  max-width: fit-content;
+  padding: 2px;
+  font-size: large;
+
+  /* flex-flow: row nowrap; */
+}
+.duedate {
+  width: fit-content;
+}
+.username {
+  width: fit-content;
+  margin-right: 90px;
+}
+#todo-list {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  /* flex: 1; */
+  /* align-items: center; */
+  /* justify-content: space-between; */
+}
+#datePicker {
+  margin-right: 5px;
+}
+.todo {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2px;
+}
+#chkDone {
+  max-width: fit-content;
+  accent-color: #cc9cf3;
+}
+#title {
+  max-width: 177px;
+  flex-grow: 2;
+}
+#due {
+  max-width: fit-content;
+}
+
+input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+}
+input[type="checkbox"]:checked + span + span {
+  text-decoration: line-through;
+}
+#welcomeModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.welcomeModalContent {
+  display: flex;
+  background-color: rgb(0, 0, 0);
+  margin: 20% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 2px solid #8685ef;
+  width: fit-content; /* Could be more or less, depending on screen size */
+  flex-flow: column wrap;
+  gap: 10px;
+}
+.welcomeModalContent > span {
+  /* background-color: #fefefe; */
+  margin: 0 auto; /* 15% from the top and centered */
+  width: fit-content; /* Could be more or less, depending on screen size */
+}
+.welcomeModalContent > input {
+  /* background-color: #fefefe; */
+  margin: 0 auto; /* 15% from the top and centered */
+  width: fit-content; /* Could be more or less, depending on screen size */
+}
+.welcomeModalContent > input::placeholder {
+  text-align: center;
+}
+.welcomeModalContent > button {
+  /* background-color: #fefefe; */
+  margin: 0 auto; /* 15% from the top and centered */
+  width: fit-content; /* Could be more or less, depending on screen size */
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
